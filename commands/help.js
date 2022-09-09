@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js")
-const commandList = require("./commands.json");
+const commandList = require("../commands.json");
 
 
 async function help(interaction) {

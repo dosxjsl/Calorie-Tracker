@@ -9,14 +9,14 @@ var {
 
     nightHour,
     nightMinutes,
-} = require("./globals");
+} = require("../globals");
 
 const {
     addZero,
     convert24to12Hour,
     ifAMorPM,
 
-} = require("./utilities.js");
+} = require("../utilities.js");
 
 async function mealTime(interaction) {
     console.log(morningHour);

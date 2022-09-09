@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js")
-
+var { userID } = require('../globals.js')
 async function notify(interaction, userID) {
     const user = interaction.options.getUser("user");
 

@@ -1,13 +1,9 @@
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js")
 
-//import { totalCalories, calorieGoal } from './index.js';
-
-//var { totalCalories, calorieGoal } = require('./index.js');
-
 var {
     calorieGoal,
     totalCalories,
-} = require("./globals.js");
+} = require("../globals.js");
 
 async function count(interaction) {
     var caloriesCount = new EmbedBuilder()
