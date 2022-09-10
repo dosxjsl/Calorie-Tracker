@@ -1,4 +1,4 @@
-# !(https://cdn.discordapp.com/attachments/762448725393932320/1018093313993228308/unknown.png) Calorie-Tracker !(https://cdn.discordapp.com/attachments/762448725393932320/1018093313993228308/unknown.png)
+# Calorie-Tracker
 ## Personalized calorie tracker.
 
 Prompts user 3 times a day to enter meal description and calorie count.<br />
