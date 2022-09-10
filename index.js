@@ -124,10 +124,10 @@ client.once("ready", () => {
         dt.getHours() == 23 && dt.getMinutes() == 59 && dt.getSeconds() == 59) {
         var flag;
         if (globals.totalCalories < globals.calorieGoal) {
-          channel.send(`<@${userID}> You have failed to reach your calorie goal for the day. Try again tomorrow!`);
+          channel.send(`<@${globals.userID}> You have failed to reach your calorie goal for the day. Try again tomorrow!`);
           flag = 0;
         } else {
-          channel.send(`<@${userID}> Congrats! You successfully reached your calorie goal for the day!`);
+          channel.send(`<@${globals.userID}> Congrats! You successfully reached your calorie goal for the day!`);
           flag = 1;
         }
         globals.foodList = [];
