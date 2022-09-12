@@ -6,7 +6,6 @@ const { Client, GatewayIntentBits, ActivityType, Routes } = require("discord.js"
 const { EmbedBuilder } = require("discord.js");
 const { REST } = require('@discordjs/rest');
 
-
 const db = require("./utilities/sql.js");
 const sql = require("sqlite3");
 const path = require("path");
@@ -16,6 +15,7 @@ const { setDefaultResultOrder } = require("dns");
 const { channel } = require("diagnostics_channel");
 
 const globals = require("./utilities/globals.js");
+const { timeEmojis } = require('./utilities/functions.js');
 
 const client = new Client({
   intents: [
@@ -82,6 +82,12 @@ client.once("ready", () => {
   listedChannel.send(
     `The current calorie goal is \`${globals.calorieGoal} cal\`. Would you like to change it?\nUse the slash command \`/change_calorie_goal\` to modify the calorie goal to your desire.`
   );
+
+  var tempDate = new Date().toLocaleString().split(",");
+  db.insertTCalTable({
+    date: tempDate[0],
+    totalCal: globals.calorieGoal
+  });
 
   //------------------------REMINDER/PROMPT FUNCTIONS-------------------------------------
 
