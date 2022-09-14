@@ -13,11 +13,14 @@ initTables()
 
 async function initTables() {
   let result1 = await checkIfThere("foodTable");
-  let result2 = await checkIfThere("totalCalorieTable");
-  if (!result1 && !result2) {
+  if (!result1) {
     console.log("Creating food table");
-    console.log("Creating total calorie table")
     await createFoodTable();
+  }
+
+  let result2 = await checkIfThere("totalCalorieTable");
+  if (!result2) {
+    console.log("Creating total calorie table")
     await createTCalTable();
   }
 }
